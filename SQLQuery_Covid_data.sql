@@ -60,6 +60,14 @@ where location = 'India'
 
 
 
+Select Location, Population,date, MAX(total_cases) as HighestInfectionCount,  Max((total_cases/population))*100 as PercentPopulationInfected
+From dbo.covid_Death_Data
+Group by Location, Population, date
+order by PercentPopulationInfected desc
+
+
+
+
 
 
  
